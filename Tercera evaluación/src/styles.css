@@ -1,0 +1,160 @@
+/* src/styles.css */
+:root {
+  /* Colores institucionales principales */
+  --institucional-blue: #1a3e72;       /* Azul oscuro institucional */
+  --institucional-gold: #d4af37;       /* Dorado institucional */
+  --institucional-light-blue: #2a5c9a; /* Azul más claro */
+  
+  /* Colores para la navbar */
+  --navbar-bg: var(--institucional-blue);
+  --navbar-text: white;
+  --navbar-border: rgba(255, 255, 255, 0.15);
+  
+  /* Colores para botones y acciones */
+  --primary-color: var(--institucional-blue);
+  --primary-hover: #14325a;
+  --secondary-color: var(--institucional-gold);
+  --secondary-hover: #bf9b30;
+  --success-color: #388e3c;           /* Verde para acciones positivas */
+  --success-hover: #2e7d32;
+  --warning-color: #ffa000;           /* Ámbar para advertencias */
+  --warning-hover: #e69100;
+  --danger-color: #d32f2f;            /* Rojo para acciones peligrosas */
+  --danger-hover: #b71c1c;
+  --info-color: #0288d1;              /* Azul claro para información */
+  --info-hover: #01579b;
+  
+  /* Colores de texto */
+  --text-dark: #212121;               /* Texto principal */
+  --text-medium: #424242;             /* Texto secundario */
+  --text-light: #757575;              /* Texto menos importante */
+  --text-on-dark: white;              /* Texto sobre fondos oscuros */
+  
+  /* Fondos y superficies */
+  --bg-light: #f5f5f5;                /* Fondo claro */
+  --bg-lighter: #fafafa;              /* Fondo más claro */
+  --bg-white: white;                  /* Fondo blanco */
+  --surface-color: white;             /* Color de superficie */
+  --surface-hover: #eeeeee;           /* Hover sobre superficies */
+  
+  /* Bordes y separadores */
+  --border-color: #e0e0e0;
+  --border-radius: 8px;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+  
+  /* Colores específicos para elementos educativos */
+  --subject-math: #3f51b5;            /* Matemáticas */
+  --subject-science: #009688;         /* Ciencias */
+  --subject-language: #ff5722;        /* Lenguaje */
+  --subject-history: #795548;         /* Historia */
+}
+
+/* Estilos para la navbar */
+.navbar {
+  display: flex;
+  background-color: var(--navbar-bg);
+  padding: 10px;
+  gap: 8px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-btn {
+  flex: 1;
+  padding: 10px 15px;
+  border: none;
+  border-radius: var(--border-radius);
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  color: var(--text-on-dark);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Estilos para cada tipo de botón */
+.nav-btn-primary {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.nav-btn-warning {
+  background-color: var(--warning-color);
+}
+
+.nav-btn-danger {
+  background-color: var(--danger-color);
+}
+
+.nav-btn-info {
+  background-color: var(--institucional-light-blue);
+  border: 1px solid var(--secondary-color);
+}
+
+/* Efectos hover */
+.nav-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-sm);
+}
+
+.nav-btn-primary:hover {
+  background-color: var(--secondary-hover);
+}
+
+.nav-btn-warning:hover {
+  background-color: var(--warning-hover);
+}
+
+.nav-btn-danger:hover {
+  background-color: var(--danger-hover);
+}
+
+.nav-btn-info:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Estilos generales para la aplicación */
+body {
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--bg-white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Estilos para tarjetas educativas */
+.card {
+  background: var(--surface-color);
+  border-radius: var(--border-radius);
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+/* Estilos para textos */
+h1, h2, h3, h4 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+h1 {
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 0.5rem;
+}
