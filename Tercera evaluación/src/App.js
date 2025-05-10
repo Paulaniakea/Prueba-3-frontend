@@ -29,10 +29,11 @@ function App() {
   };
 
   return (
-    <div className="app container">
+    <div className="app">
       <Banner />
       <NavBar setModo={setModo} />
-      <main className="container main-content">
+      
+      <main className="main-content">
         {modo !== 'listar' ? (
           <AlumnoForm
             modo={modo}
@@ -45,8 +46,9 @@ function App() {
           <AlumnoList alumnos={alumnos} />
         )}
       </main>
+      
       <footer>
-        <p>Desarrollado por Paula Rosales y Mauricio Robledo</p>
+        <p>Creado por Paula Rosales y Mauricio Robledo</p>
       </footer>
     </div>
   );

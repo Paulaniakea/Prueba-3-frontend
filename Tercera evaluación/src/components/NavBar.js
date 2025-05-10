@@ -1,33 +1,25 @@
-// src/components/NavBar.js
 import '../styles.css';
 
 function NavBar({ setModo }) {
+  const buttons = [
+    { mode: 'ingresar', label: 'Ingresar', className: 'nav-btn-primary' },
+    { mode: 'actualizar', label: 'Actualizar', className: 'nav-btn-warning' },
+    { mode: 'eliminar', label: 'Eliminar', className: 'nav-btn-danger' },
+    { mode: 'listar', label: 'Listar', className: 'nav-btn-info' }
+  ];
+
   return (
     <nav className="navbar">
-      <button
-        className="nav-btn nav-btn-primary"
-        onClick={() => setModo('ingresar')}
-      >
-        Ingresar
-      </button>
-      <button
-        className="nav-btn nav-btn-warning"
-        onClick={() => setModo('actualizar')}
-      >
-        Actualizar
-      </button>
-      <button
-        className="nav-btn nav-btn-danger"
-        onClick={() => setModo('eliminar')}
-      >
-        Eliminar
-      </button>
-      <button
-        className="nav-btn nav-btn-info"
-        onClick={() => setModo('listar')}
-      >
-        Listar
-      </button>
+      {buttons.map((btn) => (
+        <button
+          key={btn.mode}
+          className={`nav-btn ${btn.className}`}
+          onClick={() => setModo(btn.mode)}
+          aria-label={btn.label}
+        >
+          {btn.label}
+        </button>
+      ))}
     </nav>
   );
 }

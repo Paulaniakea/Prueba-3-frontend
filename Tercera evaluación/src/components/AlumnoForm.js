@@ -53,6 +53,7 @@ function AlumnoForm({ modo, agregarAlumno, actualizarAlumno, eliminarAlumno, alu
           placeholder="Nombre del alumno"
           value={nombre}
           onChange={(e) => setNombre(e.target.value)}
+          required
         />
       </div>
 
@@ -81,6 +82,7 @@ function AlumnoForm({ modo, agregarAlumno, actualizarAlumno, eliminarAlumno, alu
             placeholder="Promedio (1-7)"
             value={promedio}
             onChange={(e) => setPromedio(e.target.value)}
+            required={modo === 'ingresar'}
           />
         </div>
       )}

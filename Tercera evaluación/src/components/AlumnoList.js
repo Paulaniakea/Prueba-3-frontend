@@ -3,12 +3,13 @@ function AlumnoList({ alumnos }) {
     <div className="alumno-list">
       <h3>Listado de Alumnos</h3>
       {alumnos.length === 0 ? (
-        <p className="empty-message">No hay alumnos registrados.</p>
+        <p className="empty-message">No hay alumnos registrados</p>
       ) : (
         <ul>
-          {alumnos.map((a, index) => (
+          {alumnos.map((alumno, index) => (
             <li key={index}>
-              <strong>{a.nombre}</strong> - Promedio: {a.promedio}
+              <span><strong>{alumno.nombre}</strong></span>
+              <span>Promedio: {alumno.promedio.toFixed(1)}</span>
             </li>
           ))}
         </ul>

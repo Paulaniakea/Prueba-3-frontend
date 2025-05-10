@@ -1,13 +1,17 @@
-import bannerImage from '../assets/banner.jpg'; // Ruta relativa correcta
+import bannerImage from '../assets/banner.jpg';
+import '../styles.css';
 
 function Banner() {
   return (
-    <div className="banner container-fluid">
-      <img 
-        src={bannerImage}
-        alt="Banner" 
-        className="banner-image"
-      />
+    <div className="banner">
+      <div className="banner-container">
+        <img 
+          src={bannerImage}
+          alt="Sistema de Gestión Académica" 
+          className="banner-image"
+          loading="lazy"
+        />
+      </div>
     </div>
   );
 }
