@@ -50,7 +50,32 @@
   --subject-history: #795548;         /* Historia */
 }
 
-/* Estilos para la navbar */
+/* Base layout styles */
+body {
+  font-family: 'Segoe UI', 'Roboto', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--text-dark);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Main container */
+.container {
+  max-width: 1000px; /* Reduced from 1200px */
+  width: 90%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--bg-white);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow-sm);
+  flex: 1;
+}
+
+/* Navbar/banner styles */
 .navbar {
   display: flex;
   background-color: var(--navbar-bg);
@@ -58,6 +83,8 @@
   gap: 8px;
   margin-bottom: 20px;
   box-shadow: var(--shadow-sm);
+  width: 100%;
+  align-self: flex-start;
 }
 
 .nav-btn {
@@ -72,6 +99,16 @@
   font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+}
+
+/* Footer styles */
+footer {
+  background-color: var(--navbar-bg);
+  color: var(--text-on-dark);
+  padding: 15px 0;
+  text-align: center;
+  margin-top: auto;
+  width: 100%;
 }
 
 /* Estilos para cada tipo de botón */
@@ -114,23 +151,6 @@
 
 .nav-btn-info:hover {
   background-color: var(--primary-hover);
-}
-
-/* Estilos generales para la aplicación */
-body {
-  font-family: 'Segoe UI', 'Roboto', sans-serif;
-  background-color: var(--bg-light);
-  color: var(--text-dark);
-  line-height: 1.6;
-}
-
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: var(--bg-white);
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow-sm);
 }
 
 /* Estilos para tarjetas educativas */

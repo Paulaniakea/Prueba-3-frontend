@@ -29,10 +29,10 @@ function App() {
   };
 
   return (
-    <div className="app">
+    <div className="app container">
       <Banner />
       <NavBar setModo={setModo} />
-      <main className="main-content">
+      <main className="container main-content">
         {modo !== 'listar' ? (
           <AlumnoForm
             modo={modo}
